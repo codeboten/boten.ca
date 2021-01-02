@@ -3,7 +3,7 @@ layout: post
 title:  "Relationship retros"
 author: alex
 categories: [ retro, agile, relationship ]
-image: assets/images/12.jpg
+image: assets/images/relationships.png
 featured: false
 hidden: false
 ---
