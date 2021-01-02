@@ -4,8 +4,8 @@ title: "boten.ca"
 description: "Blog about things"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-baseurl: /boten.ca
-google_analytics: 'UA-46278016-1'
+baseurl: /
+google_analytics: '257523678'
 include: ["_pages"]
 permalink: /:title/
 
