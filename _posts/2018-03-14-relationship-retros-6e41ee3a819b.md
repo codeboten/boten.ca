@@ -8,10 +8,6 @@ featured: false
 hidden: false
 ---
 
-# Relationship retros
-
-Relationship retros
-
 In a few words, a retrospective is some amount of time that a group of individuals or a team dedicates to reflecting on an iteration, a project, a feature or some other event. They then identify ways to improve their current process, and agree on action items they want to experiment with, or followup on. I won’t dive any deeper into what retros are here. If you’re interested in finding out more about them, there are hundreds of great article explaining them, why they’re useful and how to get started with retros. What I want to talk about is how my wife and I have used retros to iterate on our relationship. It might sound insane, or it might sound like we like process for the sake of process, but I love retros, because I only use them when they’re providing value. Here’s how we have been using retros every (almost) week for over 4 years.
 
 ### Create safety
