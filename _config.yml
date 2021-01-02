@@ -5,7 +5,7 @@ description: "Blog about things"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: /
-google_analytics: '257523678'
+google_analytics: 'UA-186352412-1'
 include: ["_pages"]
 permalink: /:title/
 
