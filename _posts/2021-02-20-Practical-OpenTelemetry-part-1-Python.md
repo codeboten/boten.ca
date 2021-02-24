@@ -2,7 +2,7 @@
 layout: post
 title:  "Practical OpenTelemetry part 1: Python"
 author: alex
-categories: [ opentelemetry, agile, relationship ]
+categories: [ opentelemetry, python, observability, tracing ]
 image: assets/images/lamna-the-shark-zaFhaoPFvkk-unsplash.jpg
 featured: true
 hidden: false
@@ -459,7 +459,7 @@ trace.set_tracer_provider(provider)
 ...
 ```
 
-Now let's run the client and server one last time. If everything went accoring to plan, we should be able to open up the Jaeger interface, search for one of our servies and "Find Traces":
+Now let's run the client and server one last time. If everything went according to plan, we should be able to open up the Jaeger interface, search for one of our services and "Find Traces":
 
 ![services-in-jaeger](/assets/images/otel-part-1-1.png)
 
