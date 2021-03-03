@@ -151,7 +151,7 @@ Hmm, that doesn't look right, what happened? We see the connected trace for the 
 
 ![inventory-service](/assets/images/otel-part-2-3.png)
 
-It looks like we've got ourselve an old fashioned propagation problem on our hands!
+Looks like we've got ourselves an old fashioned propagation problem on our hands!
 
 ## Propagation
 
