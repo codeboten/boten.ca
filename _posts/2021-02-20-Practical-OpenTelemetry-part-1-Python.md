@@ -9,7 +9,7 @@ hidden: false
 
 ---
 
-The OpenTelemetry project delivered an [important milestone](https://medium.com/opentelemetry/opentelemetry-specification-v1-0-0-tracing-edition-72dd08936978) in February 2021, the specification for the tracing API and SDK reached 1.0.0! Soon after, several implementations have shipped 1.0.0 release candidates builds. To celebrate, I decided to put together a series of tutorials on different components and implementations of the project. As .Net, Python and Java were the first implentations to get out of the door, I thought why not start with a tutorial for Python.
+The OpenTelemetry project delivered an [important milestone](https://medium.com/opentelemetry/opentelemetry-specification-v1-0-0-tracing-edition-72dd08936978) in February 2021, the specification for the tracing API and SDK reached 1.0.0! Soon after, several implementations have shipped 1.0.0 release candidates builds. To celebrate, I decided to put together a series of tutorials on different components and implementations of the project. As .Net, Python and Java were the first implementations to get out of the door, I thought why not start with a tutorial for Python.
 
 Throughout the series, we'll build a series of services that will combine together to create a distributed system. We'll explore setting up different backends to visualize our data and configure the collector as well. Since the specification for the metrics and logging APIs are still being developed,  we'll focus on the tracing side of things.
 
