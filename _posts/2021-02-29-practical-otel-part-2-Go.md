@@ -56,9 +56,9 @@ package main
 import "github.com/gin-gonic/gin"
 
 type Product struct {
-	Name  string `json:"name"`
-	Price string `json:"price"`
-	ID    string `json:"id"`
+	Name  string  `json:"name"`
+	Price float64 `json:"price"`
+	ID    string  `json:"id"`
 }
 
 type Inventory struct {
