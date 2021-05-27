@@ -147,7 +147,7 @@ Attributes:
      -> otel.library.name: STRING(__main__)
 ```
 
-With all of this in place, we can feel free to test out different telemetry backends to our hearts' content without ever feeling the pressure of vendor lock-in! The OpenTelemetry Collector is so much more than is covered in this article, please take a look at the [collector repository](https://github.com/open-telemetry/opentelemetry-collector) and the [OpenTelemetry website](https://opentelemetry.io) for additional information. The configuration for this article can be found alongside the code for all previous parts in GitHub.
+With all of this in place, we can feel free to test out different telemetry backends to our hearts' content without ever feeling the pressure of vendor lock-in! The OpenTelemetry Collector is so much more than is covered in this article, please take a look at the [collector repository](https://github.com/open-telemetry/opentelemetry-collector) and the [OpenTelemetry website](https://opentelemetry.io) for additional information. The configuration for this article can be found alongside the code for all previous parts in (GitHub](https://github.com/codeboten/practical-otel).
 
 ------
 
