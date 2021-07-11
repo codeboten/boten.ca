@@ -9,6 +9,8 @@ hidden: false
 
 ---
 
+*NOTE: This example code for this article has been updated with 1.3.0*
+
 The OpenTelemetry project delivered an [important milestone](https://medium.com/opentelemetry/opentelemetry-specification-v1-0-0-tracing-edition-72dd08936978) in February 2021, the specification for the tracing API and SDK reached 1.0.0! Soon after, several implementations have shipped 1.0.0 release candidates builds. To celebrate, I decided to put together a series of tutorials on different components and implementations of the project. As .Net, Python and Java were the first implementations to get out of the door, I thought why not start with a tutorial for Python.
 
 Throughout the series, we'll build a series of services that will combine together to create a distributed system. We'll explore setting up different backends to visualize our data and configure the collector as well. Since the specification for the metrics and logging APIs are still being developed,  we'll focus on the tracing side of things.
@@ -78,16 +80,16 @@ So far so good! Now let's get to OpenTelemetry! Install the following packages:
 pip install opentelemetry-api opentelemetry-sdk
 ```
 
-Next, let's update the client and the server to include configuration for OpenTelemetry and start tracing. The `TracerProvider` allows us to obtain a tracer to create spans with. The `BatchExportSpanProcessor` will allow us to export spans once they've ended. Last but not least, the `ConsoleSpanExporter` will output our tracing data to the terminal. 
+Next, let's update the client and the server to include configuration for OpenTelemetry and start tracing. The `TracerProvider` allows us to obtain a tracer to create spans with. The `BatchSpanProcessor` will allow us to export spans once they've ended. Last but not least, the `ConsoleSpanExporter` will output our tracing data to the terminal. 
 
 ```python
 from opentelemetry import trace
 from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchExportSpanProcessor, ConsoleSpanExporter
+from opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter
 
 exporter = ConsoleSpanExporter() # will output tracing information to the terminal
 provider = TracerProvider() # the SDK tracer provider allows us to get a tracer
-span_processor = BatchExportSpanProcessor(exporter) # batches exports of spans once they've ended
+span_processor = BatchSpanProcessor(exporter) # batches exports of spans once they've ended
 provider.add_span_processor(span_processor)
 trace.set_tracer_provider(provider)
 ```
@@ -107,12 +109,12 @@ The code for our applications now looks like this:
 from flask import Flask
 from opentelemetry import trace
 from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchExportSpanProcessor, ConsoleSpanExporter
+from opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter
 
 
 exporter = ConsoleSpanExporter()
 provider = TracerProvider()
-span_processor = BatchExportSpanProcessor(exporter)
+span_processor = BatchSpanProcessor(exporter)
 provider.add_span_processor(span_processor)
 trace.set_tracer_provider(provider)
 app = Flask(__name__)
@@ -134,11 +136,11 @@ if __name__ == "__main__":
 import requests
 from opentelemetry import trace
 from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchExportSpanProcessor, ConsoleSpanExporter
+from opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter
 
 exporter = ConsoleSpanExporter()
 provider = TracerProvider()
-span_processor = BatchExportSpanProcessor(exporter)
+span_processor = BatchSpanProcessor(exporter)
 provider.add_span_processor(span_processor)
 trace.set_tracer_provider(provider)
 
@@ -245,12 +247,12 @@ Then we'll need to use the instrumentation libraries in our code, each library i
 from flask import Flask
 from opentelemetry import trace
 from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchExportSpanProcessor, ConsoleSpanExporter
+from opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter
 from opentelemetry.instrumentation.flask import FlaskInstrumentor
 
 exporter = ConsoleSpanExporter()
 provider = TracerProvider(
-    active_span_processor=BatchExportSpanProcessor(ConsoleSpanExporter())
+    active_span_processor=BatchSpanProcessor(ConsoleSpanExporter())
 )
 trace.set_tracer_provider(provider)
 
@@ -274,12 +276,12 @@ if __name__ == "__main__":
 import requests
 from opentelemetry import trace
 from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchExportSpanProcessor, ConsoleSpanExporter
+from opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter
 from opentelemetry.instrumentation.requests import RequestsInstrumentor
 
 exporter = ConsoleSpanExporter()
 provider = TracerProvider(
-    active_span_processor=BatchExportSpanProcessor(ConsoleSpanExporter())
+    active_span_processor=BatchSpanProcessor(ConsoleSpanExporter())
 )
 trace.set_tracer_provider(provider)
 
@@ -450,10 +452,10 @@ And add a new `SpanProcessor` configured to use the `JaegerExporter`:
 
 ```python
 ...
-from opentelemetry.exporter.jaeger import JaegerSpanExporter
+from opentelemetry.exporter.jaeger.thrift import JaegerExporter
 
 provider.add_span_processor(
-    BatchExportSpanProcessor(JaegerSpanExporter("grocery-store"))
+    BatchSpanProcessor(JaegerExporter("grocery-store"))
 )
 trace.set_tracer_provider(provider)
 ...
