@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Practical OpenTelemetry part 5: Spin up all applications with a single command"
+title:  "Practical OpenTelemetry part 5: Test drive Python, Go, Java with a single command"
 author: alex
 categories: [ opentelemetry, java, python, go, collector, observability, tracing ]
 image: assets/images/antoine-petitteville-hHntcuiLbOg-unsplash.jpg
