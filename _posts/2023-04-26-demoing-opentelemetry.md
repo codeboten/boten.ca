@@ -2,7 +2,7 @@
 layout: post
 title: "Demoing OpenTelemetry"
 author: alex
-categories: [books]
+categories: [opentelemetry, collector, observability]
 image: assets/images/flowers.png
 featured: true
 hidden: false
