@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Demoing OpenTelemetry"
+title: "A user interface for OpenTelemetry"
 author: alex
 categories: [opentelemetry, collector, observability]
 image: assets/images/flowers.png
@@ -58,4 +58,10 @@ With the container running, the next step is to generate some data. If you've al
 ![viewer-with-telemetry](/assets/images/demo-5.png)
 <center>First trace rendered!</center>
 
-The trace is shown in the viewer, and we can explore the data through the web UI. The viewer already supports viewing trace data received by the OTLP receiver. Adding support for logs and metrics is next. After discussing it with the original author, there is interest in donating the OpenTelemetry Desktop Viewer to the OpenTelemetry project if there is support in the community. If you too think this is something you would find useful, comment on the [repository](https://github.com/CtrlSpice/otel-desktop-viewer) or reach out over the internets!
+The trace is shown in the viewer, and we can explore the data through the web UI. Having a tool like this is really powerful for a few reasons:
+
+* simplifies the experience for new comers
+* gives people a way to explore the data that isn't just reading the console output
+* quickly tells us if data is going through the collector
+
+The viewer already supports viewing trace data received by the OTLP receiver. Adding support for logs and metrics is next. After discussing it with the original author, there is interest in donating the OpenTelemetry Desktop Viewer to the OpenTelemetry project if there is support in the community. If you too think this is something you would find useful, comment on the [repository](https://github.com/CtrlSpice/otel-desktop-viewer) or reach out over the internets!
