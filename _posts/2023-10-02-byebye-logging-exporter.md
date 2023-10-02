@@ -3,7 +3,7 @@ layout: post
 title:  "Bye bye logging exporter, hello debug exporter!"
 author: alex
 categories: [ opentelemetry, observability, collector ]
-image: assets/images/logs.png
+image: assets/images/logs.jpg
 featured: true
 hidden: false
 
