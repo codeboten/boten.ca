@@ -22,7 +22,13 @@ Additionally, there was never a commitment from the community around the consist
 
 ## OMG THE LOGGING EXPORTER IS DEPRECATED NOW WHAT??!?
 
-So the first thing to keep in mind, is that although it is now deprecated, the logging exporter will continue to be shipped with the Collector for some time. The initial thoughts from the community was to keep it around for at least one year. This may be extended as the community receives feedback from end users. The second thing, is that switching from the logging exporter to the debug exporter requires a small amount of effort.
+Starting at v0.86.0 of the Collector, if you're using the logging exporter, you will see the following warning in your logs:
+
+```bash
+2023-10-02T12:36:37.792-0700	info	exporter@v0.86.0/exporter.go:275	Deprecated component. Will be removed in future releases.	{"kind": "exporter", "data_type": "traces", "name": "logging"}
+```
+
+Do *not* panic! The first thing to keep in mind, is that although it is now deprecated, the logging exporter will continue to be shipped with the Collector for some time. The initial thoughts from the community was to keep it around for at least one year. This may be extended as the community receives feedback from end users. The second thing, is that switching from the logging exporter to the debug exporter requires a small amount of effort.
 
 ### Updating the configuration
 
