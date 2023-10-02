@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Bye bye "logging" exporter, hello debug exporter!"
+title:  "Bye bye logging exporter, hello debug exporter!"
 author: alex
 categories: [ opentelemetry, observability, collector ]
 image: assets/images/logs.png
@@ -84,6 +84,6 @@ I certainly hope not. I don't think anyone wants to go through another rename fo
 
 Note that along with the releases in the collector distributions last week, the [helm charts](https://github.com/open-telemetry/opentelemetry-helm-charts) have also been updated to support the debug exporter. Hope this helped you get a better understanding of why the change happened and what changes (if any) need to be made to adapt to the change.
 
----
+------
 
 Photo by [Joel & Jasmin Førestbird](https://unsplash.com/@theforestbirds?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/Kfy_FwhfPlc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
