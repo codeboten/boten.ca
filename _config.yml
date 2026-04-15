@@ -15,13 +15,12 @@ authors:
     name: Alex
     display_name: Alex
     gravatar: 8598db1a911bc416064f02b2d3896443
-    twitter: https://twitter.com/codeboten
+    twitter: https://bsky.app/profile/boten.ca
     description: "Passionate about inclusivity, sustainability, cycling and health. Software problems solver, aspiring writer. My opinions are my own. He/him"
   serra:
     name: Serra
     display_name: Serra    
     gravatar: c51dc17c9f2f26e71d182e880f5ee9c3
-    twitter: https://twitter.com/serraboten
     description: "overwhelmed + under caffeinated"
 
 # Plugins
