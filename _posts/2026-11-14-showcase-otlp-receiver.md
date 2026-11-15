@@ -19,6 +19,6 @@ If you're using anything that's instrumented with OpenTelemetry, you'll definite
 
 ## Where do I learn more?
 
-- https://explorer.opentelemetry.io/collector/components/core/otlpreceiver
-- https://opentelemetry.io/docs/collector/configuration/#receivers
-- https://github.com/open-telemetry/opentelemetry-collector/tree/main/receiver/otlpreceiver
+- [https://explorer.opentelemetry.io/collector/components/core/otlpreceiver](https://explorer.opentelemetry.io/collector/components/core/otlpreceiver)
+- [https://opentelemetry.io/docs/collector/configuration/#receivers](https://opentelemetry.io/docs/collector/configuration/#receivers)
+- [https://github.com/open-telemetry/opentelemetry-collector/tree/main/receiver/otlpreceiver](https://github.com/open-telemetry/opentelemetry-collector/tree/main/receiver/otlpreceiver)
