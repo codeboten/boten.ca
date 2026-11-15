@@ -17,6 +17,16 @@ The OTLP (OpenTelemetry Protocol) receiver can be configured to receive telemetr
 
 If you're using anything that's instrumented with OpenTelemetry, you'll definitely want it. There is an increasing number of applications (Docker, Claude SDK, ...) that support OTLP out of the box.
 
+## What's a minimum config look like?
+
+```yaml
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+```
+
 ## Where do I learn more?
 
 - [https://explorer.opentelemetry.io/collector/components/core/otlpreceiver](https://explorer.opentelemetry.io/collector/components/core/otlpreceiver)
